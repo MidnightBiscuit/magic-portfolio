@@ -41,10 +41,16 @@ const social: Social = [
     essential: false,
   },
   {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
-    essential: false,
+    name: "Arxiv",
+    icon: "arxiv",
+    link: "https://arxiv.org/search/physics?searchtype=author&query=Poindron,+A",
+    essential: true,
+  },
+  {
+    name: "Orcid",
+    icon: "orcid",
+    link: "https://orcid.org/0009-0003-1895-438X",
+    essential: true,
   },
   {
     name: "Email",
@@ -122,7 +128,7 @@ const about: About = {
             Studied and characterised the Duffing-type dynamics followed by the laser-cooled trapped Ca<sup>+</sup> ion.
           </>,
           <>
-            Modelled and designed a new trap assembly.
+            Modellised and designed a new trap assembly.
           </>,
         ],
         images: [
@@ -174,8 +180,16 @@ const about: About = {
         description: <>PhD in Physics and Material Sciences</>,
       },
       {
+        name: "Aix-Marseille Université",
+        description: <>Europhotonics international MSc</>,
+      },
+      {
+        name: "Aix-Marseille Université",
+        description: <>Sciences & Humanités BSc</>,
+      },
+      {
         name: "French Maritime Academy",
-        description: <>1st class merchant navy officer </>,
+        description: <>1st class merchant navy officer</>,
       },
     ],
   },
@@ -185,19 +199,19 @@ const about: About = {
     lectures: [
       {
         name: "Computer science",
-        description: <>1 </>,
+        description: <></>,
       },
       {
         name: "Geometrical optics",
-        description: <> 1</>,
+        description: <></>,
       },
       {
         name: "Newtonian physics",
-        description: <>1 </>,
+        description: <></>,
       },
       {
         name: "Colors and photography",
-        description: <>1 </>,
+        description: <></>,
       },
     ],
   },

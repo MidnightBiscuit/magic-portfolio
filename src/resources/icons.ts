@@ -29,11 +29,18 @@ import {
   SiSupabase,
   SiFortran,
   SiComsol,
+  SiArxiv,
+  SiOrcid,
 } from "react-icons/si";
 
 import {
   FaPython,
  } from "react-icons/fa";
+
+
+ import {
+  IoNewspaperOutline,
+ } from "react-icons/io5";
 
 import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaInstagram, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
 
@@ -73,6 +80,9 @@ export const iconLibrary: Record<string, IconType> = {
   reddit: FaReddit,
   telegram: FaTelegram,
   instagram: FaInstagram,
+  journal:IoNewspaperOutline,
+  arxiv:SiArxiv,
+  orcid:SiOrcid,
 };
 
 export type IconLibrary = typeof iconLibrary;
