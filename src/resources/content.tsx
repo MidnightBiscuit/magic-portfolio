@@ -2,14 +2,14 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Adrien",
+  lastName: "Poindron",
+  name: `Adrien Poindron`,
+  role: "Physicist",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "adrien.poindron@gmail.com",
+  location: "Europe/Paris", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["French", "English"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -25,13 +25,13 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/MidnightBiscuit",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/adrien-poindron-618a11128/",
     essential: true,
   },
   {
@@ -44,7 +44,7 @@ const social: Social = [
     name: "Threads",
     icon: "threads",
     link: "https://www.threads.com/@once_ui",
-    essential: true,
+    essential: false,
   },
   {
     name: "Email",
@@ -76,7 +76,7 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    I am Adrien, an experimental physicist, teacher, open source enthusiast.
 </>
   ),
 };
@@ -94,7 +94,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -102,9 +102,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I am an experimental physicist based in Montpellier, south of France. I like to tackle complex challenges, create effective and elegant solutions and transmit knowledge for the common good. My work ranges from learning new complex ideas to carrying out methodical experimental work.
       </>
     ),
   },
@@ -113,17 +111,18 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Universität Basel",
+        timeframe: "2023 - 2025",
+        role: "Post-doctorate researcher",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Developped a hybrid system involving a trapped Ca<sup>+</sup> ion and a mechanically driven nano-wire. I 
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Studied and characterised the Duffing-type dynamics followed by the laser-cooled trapped Ca<sup>+</sup> ion.
+          </>,
+          <>
+            Modelled and designed a new trap assembly.
           </>,
         ],
         images: [
@@ -137,21 +136,33 @@ const about: About = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Aix-Marseille Université",
+        timeframe: "2022 - 2023",
+        role: "Research engineer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Developed a prototype electrospray-type molecular source for a prototye high-mass single molecular ion detector.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Simulated the interaction of a flying molecular ion with the detector.
           </>,
         ],
         images: [],
       },
+      {
+        company: "Aix-Marseille Université",
+        timeframe: "2018 - 2022",
+        role: "PhD student",
+        achievements: [
+          <>
+            Developed a prototype detector of single MegaDalton molecular ions based on large ensembles of Doppler-cooled and trapped Ca<sup>+</sup> ions.
+          </>,
+          <>
+            Using molecular dynamics simulations I have established a numerical proof-of-concept, highlighting the main conditions leading to a detection event.
+          </>,
+        ],
+        images: [],
+      }
     ],
   },
   studies: {
@@ -159,12 +170,15 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Aix-Marseille Université",
+        description: <>PhD in Physics and Material Sciences</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "French Maritime Academy",
+        description: <>1st class merchant navy officer </>,
+      },
+    ],
+  },
   teaching: {
     display: true, // set to false to hide this section
     title: "Teaching",
@@ -192,14 +206,24 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Python programming",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
+          <ul>
+          <li>Data processing and analysis</li>
+          <li>Numerical simulations</li>
+          <li>Analytical studies</li>          
+          <li>Instrumentation control and grahpical interface</li>
+          </ul>
+    ),
+    //<>Minimisation of the assymetries and defects of electric potential using a Multi-Objective Optimisation tool (Pymoo).</>
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
+            name: "Python", // wxPython
+            icon: "python",
+          },
+          {
+            name: "PyQt", // wxPython
+            icon: "",
           },
         ],
         // optional: leave the array empty if you don't want to display images
@@ -219,24 +243,62 @@ const about: About = {
         ],
       },
       {
-        title: "Next.js",
+        title: "High-Performance Computation",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <ul>
+            <li>Molecular dynamics simulations with an optimised Python solver or a parallelised Fortran routine.</li>
+            <li>Modellisation and optimisation of a miniaturised particle trap with a FEM software through Python API (MPh)</li>
+            <li>Execution on a remote HPC server (Slurm).</li>
+          </ul>
         ),
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "Slurm",
+            icon: "",
           },
           {
-            name: "Next.js",
-            icon: "nextjs",
+            name: "OpenMP",
+            icon: "",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "Fortran",
+            icon: "fortran",
+          },
+          {
+            name: "Comsol",
+            icon: "comsol",
           },
         ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/projects/project-01/cover-04.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "Optics, laser systems and optical detection",
+        description: (
+          <>Operation of laser systems. Beam shaping and handling. Imaging.</>
+        ),
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/projects/project-01/cover-04.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "Instrumentation, vacuum and ",
+        description: (
+          <>Complex instrumentation handling and control, vacuum systems, .</>
+        ),
         // optional: leave the array empty if you don't want to display images
         images: [
           {
