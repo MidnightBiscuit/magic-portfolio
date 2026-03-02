@@ -331,6 +331,13 @@ const work: Work = {
   // All projects will be listed on the /home and /work routes
 };
 
+const publications: Publications = {    
+    display: true, // set to false to hide this section
+    label: "Publications",
+    title: `Publications`, // – ${person.name}
+    description: `Design and dev projects by ${person.name}`,
+};
+
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
@@ -382,4 +389,4 @@ const gallery: Gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work, publications, gallery };
