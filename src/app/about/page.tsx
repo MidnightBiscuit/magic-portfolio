@@ -45,6 +45,11 @@ export default function About() {
       items: about.studies.institutions.map((institution) => institution.name),
     },
     {
+      title: about.teaching.title,
+      display: about.teaching.display,
+      items: about.teaching.lectures.map((lecture) => lecture.name),
+    },
+    {
       title: about.technical.title,
       display: about.technical.display,
       items: about.technical.skills.map((skill) => skill.title),
@@ -274,6 +279,26 @@ export default function About() {
                     </Text>
                     <Text variant="heading-default-xs" onBackground="neutral-weak">
                       {institution.description}
+                    </Text>
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+
+          {about.teaching.display && (
+            <>
+              <Heading as="h2" id={about.teaching.title} variant="display-strong-s" marginBottom="m">
+                {about.teaching.title}
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.teaching.lectures.map((lecture, index) => (
+                  <Column key={`${lecture.name}-${index}`} fillWidth gap="4">
+                    <Text id={lecture.name} variant="heading-strong-l">
+                      {lecture.name}
+                    </Text>
+                    <Text variant="heading-default-xs" onBackground="neutral-weak">
+                      {lecture.description}
                     </Text>
                   </Column>
                 ))}

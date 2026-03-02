@@ -165,6 +165,25 @@ const about: About = {
       {
         name: "Build the Future",
         description: <>Studied online marketing and personal branding.</>,
+  teaching: {
+    display: true, // set to false to hide this section
+    title: "Teaching",
+    lectures: [
+      {
+        name: "Computer science",
+        description: <>1 </>,
+      },
+      {
+        name: "Geometrical optics",
+        description: <> 1</>,
+      },
+      {
+        name: "Newtonian physics",
+        description: <>1 </>,
+      },
+      {
+        name: "Colors and photography",
+        description: <>1 </>,
       },
     ],
   },
