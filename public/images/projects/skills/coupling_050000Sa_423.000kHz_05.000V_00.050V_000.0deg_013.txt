@@ -1,0 +1,17 @@
+C:\Users\Gruppe Willitsch\Documents\XP\TAC_Measurements
+0
+10.0
+125
+5
+10000
+423000.0
+1
+5e-07
+200
+SIN
+0.05
+ON
+SIN
+5.0
+ON
+0.0

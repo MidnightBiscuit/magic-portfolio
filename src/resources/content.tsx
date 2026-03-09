@@ -13,7 +13,7 @@ const person: Person = {
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
@@ -66,12 +66,12 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Investigating new frontiers in experimental physics</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">2026</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
@@ -122,20 +122,34 @@ const about: About = {
         role: "Post-doctorate researcher",
         achievements: [
           <>
-            Developped a hybrid system involving a trapped Ca<sup>+</sup> ion and a mechanically driven nano-wire. I 
+            Development of an experimental hybrid platform combining a trapped Ca<sup>+</sup> ion and a mechanically driven nanowire.
           </>,
           <>
-            Studied and characterised the Duffing-type dynamics followed by the laser-cooled trapped Ca<sup>+</sup> ion.
+            Study of ion–mechanical coupling to control the ion’s motional phase, oscillation amplitude, and effective trapping potential.
           </>,
           <>
-            Modellised and designed a new trap assembly.
+            Investigation of applications such as compensation of contact potentials and tuning of trap stiffness.
           </>,
+          <>Exploration of coupling schemes for quantum-regime applications, including state readout and preparation of non-classical motional states.</>,
+          <>Design of a new trap assembly.</>
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/projects/project-03/P1080305.JPG",
+            alt: "Current trap assembly",
+            width: 16,
+            height: 9,
+          },
+           {
+            src: "/images/projects/project-03/Trap7.png",
+            alt: "FEM simulation of the trap assembly",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/project-03/trapperspective_2.png",
+            alt: "Rendering of the trap assembly",
             width: 16,
             height: 9,
           },
@@ -147,13 +161,22 @@ const about: About = {
         role: "Research engineer",
         achievements: [
           <>
-            Developed a prototype electrospray-type molecular source for a prototye high-mass single molecular ion detector.
+            Adapted a commercial electrospray ionisation (ESI) source to integrate it with a custom ion-trap experimental setup.
           </>,
           <>
-            Simulated the interaction of a flying molecular ion with the detector.
+            Investigated fluid flow inside the inlet capillary to improve transmission of molecular ions into the trapping region.
+          </>,
+          <>
+            Optimised the pulse sequence controlling the molecular ion source to enhance the stability and intensity of the ion beam.
+          </>,
+          <>
+            Contributed to the development of a prototype system for the generation and injection of molecular ion beams.
           </>,
         ],
-        images: [],
+        images: [
+          // optional: leave the array empty if you don't want to display images
+          
+        ],
       },
       {
         company: "Aix-Marseille Université",
@@ -161,35 +184,83 @@ const about: About = {
         role: "PhD student",
         achievements: [
           <>
-            Developed a prototype detector of single MegaDalton molecular ions based on large ensembles of Doppler-cooled and trapped Ca<sup>+</sup> ions.
+            Designed and built an experimental setup to detect ultra-massive molecular ions using a Doppler-cooled trapped Ca<sup>+</sup> ion cloud.
           </>,
           <>
-            Using molecular dynamics simulations I have established a numerical proof-of-concept, highlighting the main conditions leading to a detection event.
+            Developed molecular dynamics simulations to identify the physical conditions required for successful detection through Coulomb interaction and RF heating.
           </>,
+          <>
+            Investigated the competition between radio-frequency heating and Doppler cooling, demonstrating both low-temperature and high-temperature equilibrium regimes.
+          </>,
+          <>Implemented the first prototype of an electrospray ionisation source coupled to an electrode array to guide molecular ions into the ion trap.</>
         ],
-        images: [],
+        images: [
+          // optional: leave the array empty if you don't want to display images
+          {
+            src: "/images/projects/project-02/Molecular_source.png",
+            alt: "Molecular source",
+            width: 16,
+            height: 12,
+          },
+          {
+            src: "/images/projects/project-01/bender_trj_30_100amu_200eV_Va180V_alt.png",
+            alt: "Charged particle trajectory in the bender",
+            width: 16,
+            height: 12,
+          },
+           {
+            src: "/images/projects/project-01/cloud_before_inje.png",
+            alt: "Cloud before injection",
+            width: 16,
+            height: 12,
+          },
+        ],
       }
     ],
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
-        name: "Aix-Marseille Université",
-        description: <>PhD in Physics and Material Sciences</>,
+        institution: "Aix-Marseille Université",
+        diploma: <a href="https://www.theses.fr/2022AIXM0087">PhD in Physics and Material Sciences</a>,
+        timeframe: "2018 - 2022",
+        description: <>I have developed an experimental device for the detection of MegaDalton molecular ions by a Doppler-cooled trapped Ca+ ion ensemble.
+Using molecular dynamics simulations I have identified the two essential conditions to meet for a successful detection: the initial coulombic interaction between the molecular ion and the assembly must be
+strong enough (mK → K) so the radio-frequency heating can further
+increase the ensemble temperature (K → kK) [1]. Radio-frequency
+heating was further investigated to understand its competition with
+Doppler cooling, enabling both low and high thermodynamic equilibria to be demonstrated [2]. The first implementation of an electrospray ionisation source and an array of electrode in a prototype was
+successfully set to guide small molecular ions through the trap.</>,
       },
       {
-        name: "Aix-Marseille Université",
-        description: <>Europhotonics international MSc</>,
+        institution: "Aix-Marseille Université",
+        diploma: <>Europhotonics international MSc</>,
+        timeframe: "2017 - 2018",
+        description: <>International masters's degree in Optics, Photonics and Instrumentation.</>,
       },
       {
-        name: "Aix-Marseille Université",
-        description: <>Sciences & Humanités BSc</>,
+        institution: "Aix-Marseille Université",
+        diploma: <>Physics MSc</>,
+        timeframe: "2016 - 2017",
+        description: <>Fundamental physics with lectures in Quantum
+  Mechanics, Statistical Physics, Atomic and
+  Spectroscopic Physics, Solid States Physics.
+  Additionnal lectures : Dynamical Systems, Signal
+  Processing, Biology-Physics.</>,
       },
       {
-        name: "French Maritime Academy",
-        description: <>1st class merchant navy officer</>,
+        institution: "Aix-Marseille Université",
+        diploma: <>Sciences & Humanités BSc</>,
+        timeframe: "2013 - 2016",
+        description: <>Transdisciplinary lectures in various fields of science and humanities : Mathematics, Physics, History of Sciences, Philosophy, Sociology and Biology. Specialised in Physics during the third year : Special Relativity, Cosmology, Statistical and Quantum Mechanics.</>,
+      },
+      {
+        institution: "French Maritime Academy",
+        diploma: <>1st class merchant navy officer diploma</>,
+        timeframe: "2010 - 2013",
+        description: <>Trained as a multi-skilled officer (deck and engine) for unlimited navigation on merchant ships. Preparatory course: Advanced naval military training. Navigated on a gas tanker (BW Nantes) accross the Panama canal, a passenger Ferry (Jean Nicoli) accross Mediterranean sea.</>,
       },
     ],
   },
@@ -220,7 +291,48 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Python programming",
+        title: "Ion trapping and laser cooling",
+        description: (
+          <ul>
+          <li>Trapping of ions in linear traps</li>
+          <li>Doppler cooling</li>
+          </ul>
+    ),
+    //<>Minimisation of the assymetries and defects of electric potential using a Multi-Objective Optimisation tool (Pymoo).</>
+        tags: [ ],
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+      {
+        title: "Optics, laser systems, detection and imaging",
+        description: (
+          <ul>
+          <li>Operation of laser systems.</li>
+          <li>Beam shaping and handling.</li>
+          <li>Fluorescence detection and imaging of single ions.</li>
+          </ul>
+        ),
+        // optional: leave the array empty if you don't want to display images
+        images: [ {
+            src: "/images/projects/skills/lasers_3.JPG",
+            alt: "Laser systems",
+            width: 16,
+            height: 9, //9
+          },],
+      },
+      {
+        title: "Instrumentation and vacuum systems",
+        description: (
+          <ul>
+          <li>Design and assembly of complex experimental setups.</li>
+          <li>Vacuum systems handling and maintenance.</li>
+          </ul>
+        ),
+        // optional: leave the array empty if you don't want to display images
+        images: [ ],
+      },
+      {
+        title: "Programming",
         description: (
           <ul>
           <li>Data processing and analysis</li>
@@ -236,6 +348,10 @@ const about: About = {
             icon: "python",
           },
           {
+            name: "Fortran", // wxPython
+            icon: "fortran",
+          },
+          {
             name: "PyQt", // wxPython
             icon: "",
           },
@@ -243,21 +359,15 @@ const about: About = {
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
+            src: "/images/projects/skills/python_all.png",
+            alt: "Python program and some examples",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        title: "High-Performance Computation",
+        title: "Scientific computing",
         description: (
           <ul>
             <li>Molecular dynamics simulations with an optimised Python solver or a parallelised Fortran routine.</li>
@@ -275,52 +385,12 @@ const about: About = {
             icon: "",
           },
           {
-            name: "Fortran",
-            icon: "fortran",
-          },
-          {
             name: "Comsol",
             icon: "comsol",
           },
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Optics, laser systems and optical detection",
-        description: (
-          <>Operation of laser systems. Beam shaping and handling. Imaging.</>
-        ),
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Instrumentation, vacuum and ",
-        description: (
-          <>Complex instrumentation handling and control, vacuum systems, .</>
-        ),
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
         ],
       },
     ],

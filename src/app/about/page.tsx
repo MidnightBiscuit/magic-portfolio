@@ -273,14 +273,24 @@ export default function About() {
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
                 {about.studies.institutions.map((institution, index) => (
-                  <Column key={`${institution.name}-${index}`} fillWidth gap="4">
-                    <Text id={institution.name} variant="heading-strong-l">
-                      {institution.name}
-                    </Text>
+                  <Column key={`${institution.institution}-${index}`} fillWidth gap="4">
+                    <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
+                    <Text id={institution.institution} variant="heading-strong-l">
+                      {institution.institution}
+                    </Text>                    
                     <Text variant="heading-default-xs" onBackground="neutral-weak">
-                      {institution.description}
+                      {institution.timeframe}
                     </Text>
-                  </Column>
+                    </Row>
+                    <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
+                      {institution.diploma}
+                    </Text>
+                    {institution.description && (
+                      <Text variant="body-default-m" onBackground="neutral-weak">
+                        {institution.description}
+                      </Text>
+                    )}
+                  </Column>                  
                 ))}
               </Column>
             </>

@@ -24,17 +24,38 @@ export default function Publications() {
     title: `Publications`, // – ${person.name}
     description: `Design and dev projects by ${person.name}`,
     
-    publications: {
+    peerreview: {
       display: true, // set to false to hide this section
-      title: "Articles",
+      title: "Peer-reviewed articles",
       articles: [
         {
-          title: <a href='https://arxiv.org/abs/2312.00683'>Anharmonic motion of a trapped ion under the influence of different drives in an ion-nanomechanical hybrid system</a>,
+          title: <>[3] <a href='https://arxiv.org/abs/2312.00683'>Anharmonic motion of a trapped ion under the influence of different drives in an ion-nanomechanical hybrid system</a></>,
           authors: "Adrien Poindron, Stefan Willitsch",
           journal: <em>ArXiV</em>,
           year: "2023",
           url: "https://arxiv.org/abs/2312.00683",
         },
+        {
+          title: <>[2] <a href='https://journals.aps.org/pra/abstract/10.1103/PhysRevA.108.013109'>Thermal bistability in laser-cooled trapped ions</a></>,
+          authors: "Adrien Poindron, Jofre Pedregosa-Gutierrez, Caroline Champenois",
+          journal: <em>Phys. Rev. A</em>,
+          year: "2023",
+          url: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.108.013109",
+        },
+        {
+          title: <>[1] <a href='https://pubs.aip.org/aip/jcp/article-abstract/154/18/184203/200291/Non-destructive-detection-of-large-molecules'>Non-destructive detection of large molecules without mass limitation</a></>,
+          authors: "Adrien Poindron, Jofre Pedregosa-Gutierrez, Christophe Jouvet, Martina Knoop, Caroline Champenois",
+          journal: <em>J. of Chem. Phys.</em>,
+          year: "2021",
+          url: "https://pubs.aip.org/aip/jcp/article-abstract/154/18/184203/200291/Non-destructive-detection-of-large-molecules",
+        },
+      ],
+    },
+
+    arxiv: {
+      display: true, // set to false to hide this section
+      title: "Preprints on arXiv",
+      articles: [
         {
           title: <a href='https://arxiv.org/abs/2312.00683'>Heating rate in a linear quadrupole trap</a>,
           authors: "Adrien Poindron, Jofre Pedregosa-Gutierrez, Caroline Champenois",
@@ -42,21 +63,21 @@ export default function Publications() {
           year: "2023",
           url: "https://arxiv.org/abs/2312.00683",
         },
-        {
-          title: <a href='https://journals.aps.org/pra/abstract/10.1103/PhysRevA.108.013109'>Thermal bistability in laser-cooled trapped ions</a>,
-          authors: "Adrien Poindron, Jofre Pedregosa-Gutierrez, Caroline Champenois",
-          journal: <em>Phys. Rev. A</em>,
-          year: "2023",
-          url: "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.108.013109",
-        },
-        {
-          title: <a href='https://pubs.aip.org/aip/jcp/article-abstract/154/18/184203/200291/Non-destructive-detection-of-large-molecules'>Non-destructive detection of large molecules without mass limitation</a>,
-          authors: "Adrien Poindron, Jofre Pedregosa-Gutierrez, Christophe Jouvet, Martina Knoop, Caroline Champenois",
-          journal: <em>J. of Chem. Phys.</em>,
-          year: "2021",
-          url: "https://pubs.aip.org/aip/jcp/article-abstract/154/18/184203/200291/Non-destructive-detection-of-large-molecules",
-        },
       ],
+    },
+
+    generalaudience: {
+      display: true, // set to false to hide this section
+      title: "General audience",
+      articles : [
+        {
+          title: <a href="https://theconversation.com/les-debuts-de-la-physique-quantique-ou-comment-admettre-elegamment-que-lon-a-tort-192752">Images de science : Les débuts de la quantique, ou comment admettre élégamment que l’on a tort</a>,
+          authors: "Adrien Poindron",
+          journal: <em>The Conversation</em>,
+          year: "2022",
+          url: "https://theconversation.com/les-debuts-de-la-physique-quantique-ou-comment-admettre-elegamment-que-lon-a-tort-192752",
+        }
+      ]
     },
   };
   return (       
@@ -126,10 +147,50 @@ export default function Publications() {
           {publications.display && (
             <>
               <Heading as="h2" id={publications.title} variant="display-strong-s" marginBottom="m">
-                {publications.title}
+                {publications.peerreview.title}
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
-                {publications.publications.articles.map((article, index) => (
+                {publications.peerreview.articles.map((article, index) => (
+                  <Column key={`${article.title}-${index}`} fillWidth gap="4">
+                    <Text id={article.title} variant="heading-strong-l">
+                      {article.title}
+                    </Text>
+                    <Text variant="heading-default-xs" onBackground="neutral-weak">
+                      {article.authors} • {article.journal} • {article.year}
+                    </Text>
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+
+          {publications.display && (
+            <>
+              <Heading as="h2" id={publications.title} variant="display-strong-s" marginBottom="m">
+                {publications.arxiv.title}
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {publications.arxiv.articles.map((article, index) => (
+                  <Column key={`${article.title}-${index}`} fillWidth gap="4">
+                    <Text id={article.title} variant="heading-strong-l">
+                      {article.title}
+                    </Text>
+                    <Text variant="heading-default-xs" onBackground="neutral-weak">
+                      {article.authors} • {article.journal} • {article.year}
+                    </Text>
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+
+          {publications.display && (
+            <>
+              <Heading as="h2" id={publications.title} variant="display-strong-s" marginBottom="m">
+                {publications.generalaudience.title}
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {publications.generalaudience.articles.map((article, index) => (
                   <Column key={`${article.title}-${index}`} fillWidth gap="4">
                     <Text id={article.title} variant="heading-strong-l">
                       {article.title}
