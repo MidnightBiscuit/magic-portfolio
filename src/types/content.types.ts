@@ -175,8 +175,6 @@ export interface About extends BasePageConfig {
     institutions: Array<{
       /** Institution name */
       name: any;
-      /** Institution name */
-      institution: string;
       /** Description of studies */
       diploma: React.ReactNode;
       timeframe: string;

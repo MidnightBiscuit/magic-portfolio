@@ -4,7 +4,7 @@ import { Line, Row, Text } from "@once-ui-system/core";
 const person: Person = {
   firstName: "Adrien",
   lastName: "Poindron",
-  name: `Adrien Poindron`,
+  name: "Adrien Poindron",
   role: "Physicist",
   avatar: "/images/avatar.jpg",
   email: "adrien.poindron@gmail.com",
@@ -223,7 +223,7 @@ const about: About = {
     title: "Education",
     institutions: [
       {
-        institution: "Aix-Marseille Université",
+        name: "Aix-Marseille Université",
         diploma: <a href="https://www.theses.fr/2022AIXM0087">PhD in Physics and Material Sciences</a>,
         timeframe: "2018 - 2022",
         description: <>I have developed an experimental device for the detection of MegaDalton molecular ions by a Doppler-cooled trapped Ca+ ion ensemble.
@@ -235,13 +235,13 @@ Doppler cooling, enabling both low and high thermodynamic equilibria to be demon
 successfully set to guide small molecular ions through the trap.</>,
       },
       {
-        institution: "Aix-Marseille Université",
+        name: "Aix-Marseille Université",
         diploma: <>Europhotonics international MSc</>,
         timeframe: "2017 - 2018",
         description: <>International masters's degree in Optics, Photonics and Instrumentation.</>,
       },
       {
-        institution: "Aix-Marseille Université",
+        name: "Aix-Marseille Université",
         diploma: <>Physics MSc</>,
         timeframe: "2016 - 2017",
         description: <>Fundamental physics with lectures in Quantum
@@ -251,13 +251,13 @@ successfully set to guide small molecular ions through the trap.</>,
   Processing, Biology-Physics.</>,
       },
       {
-        institution: "Aix-Marseille Université",
+        name: "Aix-Marseille Université",
         diploma: <>Sciences & Humanités BSc</>,
         timeframe: "2013 - 2016",
         description: <>Transdisciplinary lectures in various fields of science and humanities : Mathematics, Physics, History of Sciences, Philosophy, Sociology and Biology. Specialised in Physics during the third year : Special Relativity, Cosmology, Statistical and Quantum Mechanics.</>,
       },
       {
-        institution: "French Maritime Academy",
+        name: "French Maritime Academy",
         diploma: <>1st class merchant navy officer diploma</>,
         timeframe: "2010 - 2013",
         description: <>Trained as a multi-skilled officer (deck and engine) for unlimited navigation on merchant ships. Preparatory course: Advanced naval military training. Navigated on a gas tanker (BW Nantes) accross the Panama canal, a passenger Ferry (Jean Nicoli) accross Mediterranean sea.</>,
