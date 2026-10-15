@@ -29,11 +29,11 @@ export default function Publications() {
       title: "Peer-reviewed articles",
       articles: [
         {
-          title: <>[3] <a href='https://arxiv.org/abs/2312.00683'>Anharmonic motion of a trapped ion under the influence of different drives in an ion-nanomechanical hybrid system</a></>,
+          title: <>[3] <a href='https://journals.aps.org/prresearch/abstract/10.1103/mw5k-p3gg'>Anharmonic motion of a trapped ion under the influence of different drives in an ion-nanomechanical hybrid system</a></>,
           authors: "Adrien Poindron, Stefan Willitsch",
-          journal: <em>ArXiV</em>,
-          year: "2023",
-          url: "https://arxiv.org/abs/2312.00683",
+          journal: <em>Phys. Rev. Research</em>,
+          year: "2025",
+          url: "https://journals.aps.org/prresearch/abstract/10.1103/mw5k-p3gg",
         },
         {
           title: <>[2] <a href='https://journals.aps.org/pra/abstract/10.1103/PhysRevA.108.013109'>Thermal bistability in laser-cooled trapped ions</a></>,
