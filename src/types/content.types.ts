@@ -173,6 +173,7 @@ export interface About extends BasePageConfig {
     title: string;
     /** List of institutions attended */
     institutions: Array<{
+      name: any;
       /** Institution name */
       institution: string;
       /** Description of studies */
@@ -183,6 +184,7 @@ export interface About extends BasePageConfig {
   };
   /** teaching section */
   teaching: {
+    lectures: any;
     /** Whether to display teaching section */
     display: boolean;
     /** Title for the teaching section */
