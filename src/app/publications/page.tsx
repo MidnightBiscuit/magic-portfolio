@@ -21,7 +21,7 @@ export default function Publications() {
   const publications: Publications = {    
     display: true, // set to false to hide this section
     label: "Publications",
-    title: `Publications`, // – ${person.name}
+    title: "Publications", // – ${person.name}
     description: `Design and dev projects by ${person.name}`,
     
     peerreview: {
