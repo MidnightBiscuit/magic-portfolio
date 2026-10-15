@@ -415,10 +415,10 @@ const work: Work = {
   // All projects will be listed on the /home and /work routes
 };
 
-const publications: Publications = {    
+const publications = {    
     display: true, // set to false to hide this section
     label: "Publications",
-    title: `Publications`, // – ${person.name}
+    title: "Publications", // – ${person.name}
     description: `Design and dev projects by ${person.name}`,
 };
 
