@@ -12,13 +12,13 @@ import {
   Schema,
   Row,
 } from "@once-ui-system/core";
-import { baseURL, about, person, social, publications } from "@/resources";
+import { baseURL, about, person, social } from "@/resources";
 import styles from "@/components/about/about.module.scss";
 import React from "react";
 import { url } from "inspector";
 
 export default function Publications() {
-  const publications: Publications = {    
+  const publications = {    
     display: true, // set to false to hide this section
     label: "Publications",
     title: "Publications", // – ${person.name}
