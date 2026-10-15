@@ -152,7 +152,7 @@ export default function Publications() {
               <Column fillWidth gap="l" marginBottom="40">
                 {publications.peerreview.articles.map((article, index) => (
                   <Column key={`${article.title}-${index}`} fillWidth gap="4">
-                    <Text id={article.title} variant="heading-strong-l">
+                    <Text variant="heading-strong-l">
                       {article.title}
                     </Text>
                     <Text variant="heading-default-xs" onBackground="neutral-weak">
@@ -172,7 +172,7 @@ export default function Publications() {
               <Column fillWidth gap="l" marginBottom="40">
                 {publications.arxiv.articles.map((article, index) => (
                   <Column key={`${article.title}-${index}`} fillWidth gap="4">
-                    <Text id={article.title} variant="heading-strong-l">
+                    <Text variant="heading-strong-l">
                       {article.title}
                     </Text>
                     <Text variant="heading-default-xs" onBackground="neutral-weak">
@@ -192,7 +192,7 @@ export default function Publications() {
               <Column fillWidth gap="l" marginBottom="40">
                 {publications.generalaudience.articles.map((article, index) => (
                   <Column key={`${article.title}-${index}`} fillWidth gap="4">
-                    <Text id={article.title} variant="heading-strong-l">
+                    <Text variant="heading-strong-l">
                       {article.title}
                     </Text>
                     <Text variant="heading-default-xs" onBackground="neutral-weak">
