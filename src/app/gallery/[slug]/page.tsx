@@ -41,9 +41,11 @@ export async function generateMetadata({
     : routeParams.slug || "";
 
   const posts = getPosts(["src", "app", "gallery", "posts"]);
-  let post = posts.find((post) => post.slug === slugPath);
+  const post = posts.find((post) => post.slug === slugPath);
 
-  if (!post) return {};
+  if (!post) {
+    return {};
+  }
 
   return Meta.generate({
     title: post.metadata.title,
@@ -70,6 +72,9 @@ export default async function Gallery({ params }: { params: Promise<{ slug: stri
     post.metadata.team?.map((person) => ({
       src: person.avatar,
     })) || [];
+
+    console.log("ARTICLE RENDU :", post.slug);
+    console.log("TITRE :", post.metadata.title);
 
   return (
     <Row fillWidth>
@@ -137,25 +142,25 @@ export default async function Gallery({ params }: { params: Promise<{ slug: stri
           <Column as="article" maxWidth="s">
             <CustomMDX source={post.content} />
           </Column>
-          {post.metadata.images.length > 0 && (
+          {post.metadata.images?.length > 0 && (
             <Column fillWidth maxWidth="m">
               <GalleryView images={post.metadata.images} />
             </Column>
           )}
           
-          <ShareSection 
+          {/* <ShareSection 
             title={post.metadata.title} 
             url={`${baseURL}${gallery.path}/${post.slug}`} 
-          />
+          /> */}
 
           <Column fillWidth gap="40" horizontal="center" marginTop="40">
             <Line maxWidth="40" />
             <Text as="h2" id="recent-posts" variant="heading-strong-xl" marginBottom="24">
               Recent posts
             </Text>
-            <Posts exclude={[post.slug]} range={[1, 2]} columns="2" thumbnail direction="column" />
+            {/* <Posts exclude={[post.slug]} range={[1, 2]} columns="2" thumbnail direction="column" /> */}
           </Column>
-          <ScrollToHash />
+          {/* <ScrollToHash /> */}
         </Column>
       </Row>
       <Column

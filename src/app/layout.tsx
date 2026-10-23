@@ -160,6 +160,7 @@ export default async function RootLayout({
           <Flex zIndex={0} fillWidth padding="l" horizontal="center" flex={1}>
             <Flex horizontal="center" fillWidth minHeight="0">
               <RouteGuard>{children}</RouteGuard>
+              {/* {children} */}
             </Flex>
           </Flex>
           <Footer />
