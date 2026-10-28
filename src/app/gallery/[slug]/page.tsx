@@ -73,8 +73,8 @@ export default async function Gallery({ params }: { params: Promise<{ slug: stri
       src: person.avatar,
     })) || [];
 
-    console.log("ARTICLE RENDU :", post.slug);
-    console.log("TITRE :", post.metadata.title);
+    // console.log("ARTICLE RENDU :", post.slug);
+    // console.log("TITRE :", post.metadata.title);
 
   return (
     <Row fillWidth>
