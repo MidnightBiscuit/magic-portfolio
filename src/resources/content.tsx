@@ -128,7 +128,7 @@ const about: About = {
             Study of ion–mechanical coupling to control the ion’s motional phase, oscillation amplitude, and effective trapping potential.
           </>,
           <>
-            Investigation of applications such as compensation of contact potentials and tuning of trap stiffness.
+            Investigation of applications such as compensation of contact potentials and tuning of trap parameters.
           </>,
           <>Exploration of coupling schemes for quantum-regime applications, including state readout and preparation of non-classical motional states.</>,
           <>Design of a new trap assembly.</>
