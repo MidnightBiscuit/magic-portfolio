@@ -1,6 +1,6 @@
 "use client";
 
-import { Media, MasonryGrid } from "@once-ui-system/core";
+import { Grid, Media } from "@once-ui-system/core";
 
 interface GalleryViewProps {
   images: string[];
@@ -8,7 +8,7 @@ interface GalleryViewProps {
 
 export default function GalleryView({ images }: GalleryViewProps) {
   return (
-    <MasonryGrid columns={2} s={{ columns: 1 }}>
+    <Grid columns={2} s={{ columns: 1 }} gap="8">
       {images.map((src, index) => (
         <Media
           enlarge
@@ -20,6 +20,6 @@ export default function GalleryView({ images }: GalleryViewProps) {
           alt={`Photo ${index + 1}`}
         />
       ))}
-    </MasonryGrid>
+    </Grid>
   );
 }
