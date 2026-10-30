@@ -1,4 +1,5 @@
 import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
+import { Mailchimp } from "@/components";
 import { Posts } from "@/components/gallery/Posts";
 import { baseURL, gallery, person } from "@/resources";
 
@@ -24,7 +25,7 @@ export default function Gallery() {
         image={`/api/og/generate?title=${encodeURIComponent(gallery.title)}`}
         author={{
           name: person.name,
-          url: `${baseURL}${gallery.path}`,
+          url: `${baseURL}/gallery`,
           image: `${baseURL}${person.avatar}`,
         }}
       />
@@ -32,7 +33,13 @@ export default function Gallery() {
         {gallery.title}
       </Heading>
       <Column fillWidth flex={1} gap="40">
-        <Posts columns="2" thumbnail direction="column" />
+        <Posts range={[1, 1]} thumbnail />
+        <Posts range={[2, 3]} columns="2" thumbnail direction="column" />
+        <Mailchimp marginBottom="l" />
+        <Heading as="h2" variant="heading-strong-xl" marginLeft="l">
+          Earlier posts
+        </Heading>
+        <Posts range={[4]} columns="2" />
       </Column>
     </Column>
   );
