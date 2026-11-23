@@ -50,6 +50,11 @@ export default function About() {
       items: about.teaching.lectures.map((lecture) => lecture.name),
     },
     {
+      title: about.responsibilities.title,
+      display: about.responsibilities.display,
+      items: about.responsibilities.positions.map((position) => position.name),
+    },
+    {
       title: about.technical.title,
       display: about.technical.display,
       items: about.technical.skills.map((skill) => skill.title),
@@ -309,6 +314,31 @@ export default function About() {
                     </Text>
                     <Text variant="heading-default-xs" onBackground="neutral-weak">
                       {lecture.description}
+                    </Text>
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+
+          {about.responsibilities.display && (
+            <>
+              <Heading as="h2" id={about.responsibilities.title} variant="display-strong-s" marginBottom="m">
+                {about.responsibilities.title}
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.responsibilities.positions.map((position, index) => (
+                  <Column key={`${position.name}-${index}`} fillWidth gap="4">
+                    <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
+                    <Text id={position.name} variant="heading-strong-l">
+                      {position.name}
+                    </Text>
+                    <Text variant="heading-default-xs" onBackground="neutral-weak">
+                        {position.timeframe}
+                      </Text>
+                    </Row>
+                    <Text variant="heading-default-xs" onBackground="neutral-weak">
+                      {position.description}
                     </Text>
                   </Column>
                 ))}

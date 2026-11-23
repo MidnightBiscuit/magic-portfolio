@@ -286,6 +286,32 @@ successfully set to guide small molecular ions through the trap.</>,
       },
     ],
   },
+  responsibilities: {
+    display: true, // set to false to hide this section
+    title: "Responsibilities",
+    positions: [
+      {
+        name: "Meetings of the Youth Club of the French Society of Mass Spectrometry (Marseille)",
+        timeframe: "2023",
+        description: <>Member of the local organising committee of the 27th meeting of the youth club of the French Society of Mass Spectrometry. Students and engineers at early career stage meet for a week where they can present their work. Lectures and seminars are also provided by academic and industry seniors.</>,
+      },
+      {
+        name: "Doctoral school Physics (ED352)",
+        timeframe: "2020 - 2022",
+        description: <>Elected member of the board representing the students at the doctoral school of Physics.</>,
+      },
+      {
+        name: "Departement of Physics (Aix-Marseille University)",
+        timeframe: "2016 - 2018",
+        description: <>Elected member of the board representing the students at the Department of physics of the Aix-Marseille University.</>,
+      },
+      {
+        name: "Academic board (ENSM)",
+        timeframe: "2012 - 2013",
+        description: <>Elected member of the board representing the students at the Academic board organising the lectures.</>,
+      },
+    ],
+  },
   technical: {
     display: true, // set to false to hide this section
     title: "Technical skills",
