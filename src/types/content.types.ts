@@ -197,6 +197,23 @@ export interface About extends BasePageConfig {
       description: React.ReactNode;
     }>;
   };
+  /** responsibilities section */
+  responsibilities: {
+    /** List of lectures */
+    // lectures: any;
+    /** Whether to display teaching section */
+    display: boolean;
+    /** Title for the teaching section */
+    title: string;
+    /** List of institutions attended */
+    positions: Array<{
+      /** Institution name */
+      name: string;
+      timeframe: string;
+      /** Description of studies */
+      description: React.ReactNode;
+    }>;
+  };
   /** Technical skills section */
   technical: {
     /** Whether to display technical skills section */
